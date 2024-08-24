@@ -9,8 +9,7 @@
     "postbuild": "npx prisma migrate dev --name init && node src/start/database.js",
     "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest"
+    "lint": "next lint"
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",
