@@ -98,7 +98,7 @@ article {
   gap: 8px;
   justify-items: center;
   align-items: center;
-  padding: 8px;
+  padding: 8px 8px 2px;
   border: 1px solid rgb(16, 16, 80);
   border-radius: 5px;
 }

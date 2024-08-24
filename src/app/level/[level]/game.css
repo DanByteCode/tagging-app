@@ -4,16 +4,17 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-inline: 24px;
+  justify-content: center;
   border-color: #242424;
   background-color: #1a1a1aaa;
 }
 
 .find-list {
   display: flex;
-  gap: 16px;
+  gap: 8px;
+  flex-wrap: wrap;
   text-transform: capitalize;
+  justify-content: center;
 }
 
 .found {
@@ -80,6 +81,7 @@
 .find-list>article {
   font-family: monospace;
   font-size: smaller;
+  width: 80px;
 }
 
 .win-modal {
@@ -97,7 +99,7 @@
   align-items: center;
 }
 
-.end:disabled{
+.end:disabled {
   pointer-events: none;
   opacity: 0.5;
 }
