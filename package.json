@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbo",
-    "database": "npx prisma generate && npx prisma migrate dev --name init && node src/start/database.js",
+    "postbuild": "npx prisma generate && npx prisma migrate dev --name init && node src/start/database.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
