@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbo",
-    "postbuild": "npx prisma generate && npx prisma migrate dev --name init && node src/start/database.js",
-    "build": "next build",
+    "postbuild": "npx prisma migrate dev --name init && node src/start/database.js",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest"
@@ -16,7 +16,6 @@
     "@prisma/client": "^5.18.0",
     "axios": "^1.7.4",
     "date-fns": "^3.6.0",
-    "dotenv": "^16.4.5",
     "jose": "^5.6.3",
     "next": "14.2.5",
     "react": "^18",
