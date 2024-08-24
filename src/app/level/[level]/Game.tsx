@@ -81,7 +81,7 @@ export function Game({ level }: { level: Level }) {
         setStarted={setStarted}
       />
       {finalized > 0 && (
-        <dialog className="win-modal p-6 flex flex-col gap-3" open>
+        <dialog className="win-modal p-6 flex flex-col justify-between gap-5" open>
           <h3 className="text-center text-2xl">You found everyone</h3>
           <p>
             Time:{' '}
