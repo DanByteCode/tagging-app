@@ -2,6 +2,7 @@
 import { format } from 'date-fns'
 import { useEffect, useState } from 'react'
 import { getBest } from './actions'
+import TableLoad from './TableLoad'
 
 type ScoreList = ({
   user: {
@@ -25,7 +26,8 @@ export default function Table({ level }: { level: string }) {
     }
     getList()
   }, [level])
-  return (
+  return list.length > 0
+    ? (
     <table>
       <tr>
         <th className="max-w-5">POS</th>
@@ -46,5 +48,8 @@ export default function Table({ level }: { level: string }) {
         )
       })}
     </table>
-  )
+      )
+    : (
+    <TableLoad />
+      )
 }
