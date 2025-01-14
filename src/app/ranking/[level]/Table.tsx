@@ -35,18 +35,19 @@ export default function Table({ level }: { level: string }) {
         <th className="max-w-4">DATE</th>
         <th className="max-w-4">TIME</th>
       </tr>
-      {list.map((s, index) => {
-        return (
+        {list.map((s, index) => {
+          const name = s.user.name.trim()
+          return (
           <tr key={s.id} className="size-full">
             <td className="text-center max-w-4">{index + 1}</td>
-            <td>{s.user.name}</td>
+            <td>{name.length > 0 ? name : 'Unknown' }</td>
             <td className="text-center">{s.date.toLocaleDateString()}</td>
             <td className="font-mono text-center">
               {format(s.time, 'mm:ss.SSS')}
             </td>
           </tr>
-        )
-      })}
+          )
+        })}
     </table>
       )
     : (
